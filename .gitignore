@@ -1,0 +1,18 @@
+# Dependencias
+node_modules/
+
+# Archivos generados
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Configuración privada
+.env
+.env.*
+!.env.example
+
+# Registros y archivos del sistema
+*.log
+.DS_Store
+Thumbs.db

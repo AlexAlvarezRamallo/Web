@@ -229,7 +229,7 @@ Se comprobó que los archivos preparados excluyen `node_modules`, `dist`, archiv
 
 Durante la preparación, Git detectó propietarios diferentes entre la sesión aislada del asistente y el usuario de Windows. Se utilizó `git -c safe.directory=D:/web ...` para confiar únicamente en esta ruta durante los comandos necesarios; no se cambió la configuración global. La conexión a GitHub requirió ejecutar los comandos con acceso de red fuera de la sesión aislada. Este detalle corresponde al entorno del asistente y normalmente no será necesario en la terminal del propietario del proyecto.
 
-La publicación está pendiente de verificar al escribir este apartado. La compilación y ESLint se comprobarán antes del commit.
+La compilación y ESLint finalizaron correctamente antes del primer commit (`050b438`). La primera subida a `main` se completó y la rama local quedó vinculada a `origin/main`. Para comprobar la sincronización se utilizan `git status` y `git ls-remote origin refs/heads/main`, comparando este último resultado con `git rev-parse HEAD`.
 
 ## Cómo continuar este registro
 

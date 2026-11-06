@@ -182,3 +182,88 @@
     border-right-color: var(--border);
   }
 }
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: 18px 12px;
+  background-color: #eee7d8;
+  border-bottom: 1px solid #ded5c5;
+}
+.benefits__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 16px;
+  color: #18252b;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.benefits__item + .benefits__item {
+  border-left: 1px solid #ded5c5;
+}
+
+.benefits__icon {
+  color: #916528;
+  font-size: 17px;
+}
+/* En móvil, los elementos se colocan uno debajo de otro. */
+@media (max-width: 600px) {
+  .benefits {
+    grid-template-columns: 1fr;
+    padding: 8px 20px;
+  }
+
+  .benefits__item {
+    padding: 14px 0;
+  }
+
+  .benefits__item + .benefits__item {
+    border-left: 0;
+    border-top: 1px solid #ded5c5;
+  }
+}
+.tercerset {
+  display: block;
+  padding: 18px 12px;
+  background-color: #eee7d8;
+  border-bottom: 1px solid #ded5c5;
+}
+.tercerset_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 16px;
+  color: #18252b;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tercerset_item + .tercerset_item {
+  border-left: 1px solid #ded5c5;
+}
+
+.tercerset__icon {
+  color: #916528;
+  font-size: 17px;
+}
+/* En móvil, los elementos se colocan uno debajo de otro. */
+@media (max-width: 600px) {
+  .tercerset {
+    padding: 8px 20px;
+  }
+
+  .tercerset_item {
+    padding: 14px 0;
+  }
+
+  .tercerset_item + .tercerset_item {
+    border-left: 0;
+    border-top: 1px solid #ded5c5;
+  }
+}

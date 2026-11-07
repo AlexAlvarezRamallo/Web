@@ -1,0 +1,142 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 32px;
+  background: #faf5e9;
+  color: #142830;
+  border-bottom: 1px solid #ded5c5;
+  font-family: 'Manrope', sans-serif;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.site-header__logo {
+  display: block;
+  width: 70px;
+  height: auto;
+}
+
+.site-header__nav,
+.site-header__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-header__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.site-header__links a {
+  display: block;
+  padding: 10px 0;
+}
+
+.site-header__links a:hover {
+  color: #08747b;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.site-header .site-header__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: #142830;
+  color: #faf5e9;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.site-header__cta:hover {
+  background: #21505a;
+}
+
+.site-header__toggle {
+  display: none;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #a9b4b4;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.site-header :focus-visible {
+  outline: 3px solid #08747b;
+  outline-offset: 4px;
+}
+
+.site-header__skip {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 12px;
+  background: #faf5e9;
+  transform: translateY(-200%);
+}
+
+.site-header__skip:focus {
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .site-header__toggle {
+    display: block;
+  }
+
+  .site-header__logo {
+    width: 72px;
+  }
+
+  .site-header__nav {
+    display: none;
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid #ded5c5;
+  }
+
+  .site-header__nav--open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .site-header__links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}

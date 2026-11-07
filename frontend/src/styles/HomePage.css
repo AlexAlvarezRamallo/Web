@@ -16,6 +16,7 @@
   justify-content: center;
   align-items: flex-start;
   text-align: left;
+  
 }
 
 .portada h1 {
@@ -26,6 +27,14 @@
   line-height: 1.1;
   margin: 0 0 12px;
   font-size: clamp(2.5rem, 6vw, 5rem);
+  
+}
+
+.portada__logo {
+  display: block;
+  width: clamp(160px, 25vw, 280px);
+  max-width: 100%;
+  height: auto;
 }
 
 .portada h2 {
@@ -33,30 +42,90 @@
   margin: 0 0 20px;
   color: #802b7a;
   font-size: 24px;
+  
+  
 }
 
 .portada p {
-  font-family: "Manrope", sans-serif;
+  
   margin: 0;
   max-width: 28ch;
   font-size: clamp(16px, 2vw, 20px);
   line-height: 1.6;
   color: #118395;
+  font-family: 'Satisfy', cursive;
+
 }
 
 .coleccion {
   padding: 48px 24px;
   background-color: #faf5e9;
   color: #142830;
+  
+ 
 }
 
 .coleccion h2 {
   
   color: inherit;
+  
 }
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: 18px 12px;
+  background-color: #eee7d8;
+  border-bottom: 1px solid #ded5c5;
+}
+.benefits__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 16px;
+  color: #18252b;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.benefits__item span:not(.benefits__icon) {
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.benefits__item + .benefits__item {
+  border-left: 1px solid #ded5c5;
+}
+
+.benefits__icon {
+  color: #916528;
+  font-size: 17px;
+}
+/* En móvil, los elementos se colocan uno debajo de otro. */
+@media (max-width: 600px) {
+  .benefits {
+    grid-template-columns: 1fr;
+    padding: 8px 20px;
+  }
+
+  .benefits__item {
+    padding: 14px 0;
+  }
+
+  .benefits__item + .benefits__item {
+    border-left: 0;
+    border-top: 1px solid #ded5c5;
+  }
+}
+
 .tercerset {
-  padding: 64px 32px;
-  background: #f8f4eb;
+  display: block;
+  padding: 18px 12px;
+  background: #eee7d8;
+  border-bottom: 1px solid #ded5c5;
   color: #142830;
   text-align: left;
 }
@@ -64,18 +133,22 @@
 .tercerset h3 {
   margin: 0 0 32px;
   font-size: clamp(28px, 4vw, 48px);
+  font-family: 'Satisfy', cursive;
 }
 
 .tercerset__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+  
 }
 
 .acabado {
   min-width: 0;
   background: #fffcf5;
   border: 1px solid #ded5c5;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .acabado__imagen {
@@ -102,6 +175,7 @@
   padding: 20px;
   font-size: 24px;
   font-weight: 500;
+  font-family: 'Satisfy', cursive;
 }
 
 /* En móvil, una tarjeta por fila. */
@@ -114,5 +188,62 @@
 @media (prefers-reduced-motion: reduce) {
   .acabado__imagen img {
     transition: none;
+  }
+}
+.cuartoset {
+  padding: 64px 32px;
+  background: #f8f4eb;
+  color: #142830;
+  text-align: left;
+}
+
+.cuartoset span {
+  display: block;
+  margin: 0 0 50px;
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 55px;
+}
+.cuartoset p {
+  margin: 0 0 0px;
+  font-family: 'Satisfy', cursive;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.resenas {
+  padding: 64px 24px;
+  background: #faf5e9;
+  color: #142830;
+  text-align: center;
+}
+
+.resenas h2 {
+  margin: 0 0 32px;
+  font-family: 'Satisfy', cursive;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.resenas__vacio {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background: #fffcf5;
+  border: 1px solid #ded5c5;
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+.resenas__mensaje {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .tercerset {
+    padding: 8px 20px;
   }
 }

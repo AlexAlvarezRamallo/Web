@@ -1,4 +1,5 @@
 import portada from '../assets/portada.png'
+import logo from '../assets/Logo.png'
 import rallas from '../assets/rallas.png'
 import naranja from '../assets/naranja.png'
 import azul from '../assets/azul.png'
@@ -6,14 +7,15 @@ import '../styles/HomePage.css'
 
 function HomePage() {
   return (
-    <main>
+    <main id="contenido" tabIndex={-1}>
       <section
         className="portada"
+        id="inicio"
         style={{ backgroundImage: `url(${portada})` }}
       >
-        <h1>Kraken</h1>
-        <h2>Poteras artesanas</h2>
-        <p>Poteras hechas a mano, inspiradas en el Atlántico.</p>
+        <h1><img className="portada__logo" src={logo} alt="Kraken" /></h1>
+        
+        <p>-  Inspiradas en el Atlántico.</p>
       </section>
 
           <section className="benefits" aria-label="Características">
@@ -32,7 +34,7 @@ function HomePage() {
         <span>Pesca de cefalópodos</span>
       </div>
     </section>
-    <section className="tercerset">
+    <section className="tercerset" id="poteras">
   <h3>Acabados artesanales</h3>
 
   <div className="tercerset__grid">
@@ -58,15 +60,23 @@ function HomePage() {
     </article>
   </div>
 </section>
-    <section>
-      <h3>Sobre nosotros</h3>
+    <section className="cuartoset" id="sobre-nosotros" aria-label="Sobre nosotros">
+      <div>
+      <span>Sobre nosotros</span>
       <p>
-        Somos un Artesano de poteras por afición, que busca ofrecer productos de calidad 
+        Soy un Artesano de poteras por afición, que busca ofrecer productos de calidad 
         y con acabados artesanales. Nos inspiramos en el mar y en la pesca de cefalópodos 
         para crear poteras únicas y funcionales.
       </p>
+      </div>
     </section>
-
+    <section className="resenas" aria-labelledby="resenas-titulo">
+      <h2 id="resenas-titulo">Opiniones de nuestros clientes</h2>
+      <div className="resenas__vacio">
+        <p className="resenas__mensaje">Aún no hay reseñas.</p>
+        <p>Estamos empezando. Nos encantará conocer tu experiencia con nuestras poteras.</p>
+      </div>
+    </section>
     </main>
   )
 }

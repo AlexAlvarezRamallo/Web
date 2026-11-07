@@ -3,9 +3,9 @@ import logo from '../assets/Logo.png'
 import './Header.css'
 
 const links = [
-  { href: '#inicio', label: 'Inicio' },
-  { href: '#poteras', label: 'Poteras' },
-  { href: '#sobre-nosotros', label: 'Sobre nosotros' },
+  { href: '/#inicio', label: 'Inicio' },
+  { href: '/poteras', label: 'Poteras' },
+  { href: '/#sobre-nosotros', label: 'Sobre nosotros' },
 ]
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
       }
     }}>
       <a className="site-header__skip" href="#contenido">Saltar al contenido</a>
-      <a className="site-header__brand" href="#inicio" aria-label="Kraken, inicio" onClick={() => setMenuOpen(false)}>
+      <a className="site-header__brand" href="/#inicio" aria-label="Kraken, inicio" onClick={() => setMenuOpen(false)}>
         <img className="site-header__logo" src={logo} alt="Kraken · Poteras artesanas de Galicia" />
       </a>
       <button
@@ -40,7 +40,7 @@ export default function Header() {
             <li key={href}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>
           ))}
         </ul>
-        <a className="site-header__cta" href="#poteras" onClick={() => setMenuOpen(false)}>Ver poteras <span aria-hidden="true">↗</span></a>
+        <a className="site-header__cta" href="/poteras" onClick={() => setMenuOpen(false)}>Ver poteras <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
   )

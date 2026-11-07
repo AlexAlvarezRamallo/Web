@@ -233,6 +233,16 @@ La compilación y ESLint finalizaron correctamente antes del primer commit (`050
 
 ## Cómo continuar este registro
 
+### Segunda página: catálogo de poteras (7 de noviembre de 2026)
+
+Se creó `frontend/src/pages/PoterasPage.tsx` con una portada propia, el texto sobre tamaños y tres tarjetas de productos. Su fondo está en `frontend/src/assets/portadapagepoteras.png` y sus estilos en `frontend/src/styles/PoterasPage.css`. `ProductCard.tsx` está creado pero todavía vacío; las tarjetas siguen escritas directamente en la página y utilizan clases definidas en `HomePage.css`, pendiente de extraer a un componente compartido.
+
+`App.tsx` comprueba `window.location.pathname`: muestra el catálogo para `/poteras` y el inicio para las demás rutas. Los enlaces de la cabecera usan `/poteras`; Inicio y Sobre nosotros regresan a las secciones del inicio. Esta navegación utiliza enlaces normales con recarga. Al desplegar habrá que configurar el servidor para servir `index.html` al acceder directamente a `/poteras`.
+
+Durante el desarrollo se corrigieron un `>` que faltaba al abrir `<section>`, una variable de imagen que no coincidía con la importación y la importación del CSS equivocado. Un salto de línea entre `()` y `=>` también impedía compilar. Si VS Code detecta que el archivo cambió en disco mientras estaba abierto, utilizar Comparar antes de guardar para conservar los cambios necesarios.
+
+Antes del commit `SegundaPage`, se ejecutaron `npm.cmd run build` y `npm.cmd run lint` desde `frontend`: ambos finalizaron correctamente. Queda revisar visualmente el catálogo y la navegación en escritorio y móvil. Desde la raíz se registra y sube con `git add frontend docs/getting-started.md`, `git commit -m "SegundaPage"` y `git push origin main`.
+
 ### Avances del 7 de noviembre de 2026
 
 Se diseñó la página de inicio con portada, tres tarjetas de poteras, presentación artesanal y una sección de opiniones todavía vacía. Se creó la cabecera compartida en `frontend/src/components/Header.tsx`, con sus estilos en `Header.css`, logo importado, enlaces a las secciones y menú desplegable en móvil. La cabecera utiliza `position: sticky`, `top: 0` y `z-index: 100` para mantenerse visible al desplazarse.

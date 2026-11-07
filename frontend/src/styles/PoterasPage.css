@@ -1,0 +1,41 @@
+.poteras-portada {
+  min-height: 420px;
+  padding: 64px 32px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+.poteras-portada h1{
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 20px;
+}
+
+.poteras-portada__logo {
+  display: block;
+  width: clamp(160px, 25vw, 280px);
+  max-width: 100%;
+  height: auto;
+}
+
+.poteras-portada p {
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  color: #fbeed4;
+}
+.poteras-tipos {
+  padding: 48px 24px;
+  background-color: #fbeed4;
+  
+}
+.poteras-tipos p {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Satisfy', cursive;
+  color:#000000;
+}

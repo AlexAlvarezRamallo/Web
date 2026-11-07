@@ -1,5 +1,11 @@
 # Tienda online de poteras artesanas
 
+## Vista previa de Kraken
+
+Página principal con cabecera, navegación y productos destacados, desarrollada con React y TypeScript. Proyecto en desarrollo.
+
+![Página principal de Kraken, poteras artesanas de Galicia](docs/images/image.png)
+
 Proyecto de una tienda online para mostrar y vender poteras artesanas elaboradas por mí.
 
 El objetivo principal es desarrollar una aplicación completa para mi portfolio, demostrar mis habilidades como desarrollador junior y utilizarla para acceder a mi primera oportunidad profesional en el sector del software. La tienda también podrá ponerse en funcionamiento de forma temporal para realizar ventas reales.

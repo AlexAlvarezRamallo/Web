@@ -233,4 +233,25 @@ La compilación y ESLint finalizaron correctamente antes del primer commit (`050
 
 ## Cómo continuar este registro
 
+### Avances del 7 de noviembre de 2026
+
+Se diseñó la página de inicio con portada, tres tarjetas de poteras, presentación artesanal y una sección de opiniones todavía vacía. Se creó la cabecera compartida en `frontend/src/components/Header.tsx`, con sus estilos en `Header.css`, logo importado, enlaces a las secciones y menú desplegable en móvil. La cabecera utiliza `position: sticky`, `top: 0` y `z-index: 100` para mantenerse visible al desplazarse.
+
+Los estilos propios del inicio se agruparon en `frontend/src/styles/HomePage.css`. Se eliminó `App.css` y su importación, retirando estilos de ejemplo y consolidando las reglas duplicadas de la sección de productos. `index.css` sigue conteniendo estilos globales de la plantilla pendientes de revisar. Los bordes redondeados se aplican al contenedor `.acabado` con `overflow: hidden` para recortar conjuntamente imagen y texto.
+
+Se corrigió la referencia al logo: hay que importar el archivo y utilizar la variable en `src={logo}`, en lugar de escribir `src={Logo.png}`. Se comprobaron compilación y ESLint con `npm.cmd run build` y `npm.cmd run lint` desde `frontend`; tras el último ajuste del logo se volvió a comprobar la compilación. La captura aportada por el usuario muestra el diseño de escritorio; queda revisar la interacción y el aspecto en móvil.
+
+El commit `4e36cad`, con mensaje `cabecera_con_pag_principal`, se subió a `origin/main`. Después se añadió la captura proporcionada por el usuario en `docs/images/image.png` y se enlazó desde el README mediante una ruta relativa para mostrarla en GitHub.
+
+Para registrar esta actualización, desde la raíz del proyecto:
+
+```powershell
+git add README.md docs/getting-started.md docs/images/image.png
+git diff --cached --check
+git commit -m "docs: añade vista previa de Kraken al README"
+git push origin main
+```
+
+El siguiente paso es revisar la cabecera en móvil y continuar con el pie compartido y el catálogo. El backend, los pedidos y los pagos siguen pendientes.
+
 Para cada avance, añadiremos el objetivo, los archivos afectados, los comandos y su carpeta de ejecución, las dudas resueltas y el resultado comprobado. Diferenciaremos siempre lo previsto de lo implementado y de lo verificado. No incluiremos contraseñas ni claves privadas.

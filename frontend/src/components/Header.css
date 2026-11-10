@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px 32px;
+  padding: 18px var(--page-gutter);
   background: #faf5e9;
   color: #142830;
   border-bottom: 1px solid #ded5c5;
@@ -109,7 +109,7 @@
   .site-header {
     flex-wrap: wrap;
     gap: 16px;
-    padding: 16px 20px;
+    padding: 16px var(--page-gutter);
   }
 
   .site-header__toggle {

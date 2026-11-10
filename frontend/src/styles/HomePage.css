@@ -1,6 +1,6 @@
 .portada {
   min-height: 420px;
-  padding: 64px 32px;
+  padding: 64px var(--page-gutter);
   box-sizing: border-box;
 
   background-size: cover;
@@ -58,7 +58,7 @@
 }
 
 .coleccion {
-  padding: 48px 24px;
+  padding: 48px var(--page-gutter);
   background-color: #faf5e9;
   color: #142830;
   
@@ -74,7 +74,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
-  padding: 18px 12px;
+  padding: 18px var(--page-gutter);
   background-color: #eee7d8;
   border-bottom: 1px solid #ded5c5;
 }
@@ -108,7 +108,7 @@
 @media (max-width: 600px) {
   .benefits {
     grid-template-columns: 1fr;
-    padding: 8px 20px;
+    padding: 8px var(--page-gutter);
   }
 
   .benefits__item {
@@ -123,7 +123,7 @@
 
 .tercerset {
   display: block;
-  padding: 18px 12px;
+  padding: 48px var(--page-gutter);
   background: #eee7d8;
   border-bottom: 1px solid #ded5c5;
   color: #142830;
@@ -191,7 +191,7 @@
   }
 }
 .cuartoset {
-  padding: 64px 32px;
+  padding: 64px var(--page-gutter);
   background: #f8f4eb;
   color: #142830;
   text-align: left;
@@ -202,9 +202,12 @@
   margin: 0 0 50px;
   font-family: 'Satisfy', cursive;
   font-weight: 400;
-  font-size: 55px;
+  font-size: clamp(32px, 4vw, 55px);
+  line-height: 1.2;
 }
 .cuartoset p {
+  max-width: 65ch;
+  line-height: 1.5;
   margin: 0 0 0px;
   font-family: 'Satisfy', cursive;
   font-weight: 400;
@@ -212,7 +215,7 @@
 }
 
 .resenas {
-  padding: 64px 24px;
+  padding: 64px var(--page-gutter);
   background: #faf5e9;
   color: #142830;
   text-align: center;
@@ -244,6 +247,6 @@
 
 @media (max-width: 600px) {
   .tercerset {
-    padding: 8px 20px;
+    padding: 32px var(--page-gutter);
   }
 }

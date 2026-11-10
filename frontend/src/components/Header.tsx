@@ -5,7 +5,7 @@ import './Header.css'
 const links = [
   { href: '/#inicio', label: 'Inicio' },
   { href: '/poteras', label: 'Poteras' },
-  { href: '/#sobre-nosotros', label: 'Sobre nosotros' },
+  { href: '/SobreNosotros', label: 'Sobre nosotros' },
 ]
 
 export default function Header() {

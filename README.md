@@ -6,6 +6,12 @@ Página principal con cabecera, navegación y productos destacados, desarrollada
 
 ![Página principal de Kraken, poteras artesanas de Galicia](docs/images/image.png)
 
+### Sobre nosotros · Del mar al taller
+
+![Imagen de portada de Sobre nosotros: elaboración artesanal de una potera](frontend/src/assets/nosotrosportada.png)
+
+Inspiradas en el Atlántico y hechas con afición, una a una. La página **Sobre nosotros** presenta el origen de Kraken, el proceso artesanal y los valores de cada creación: **inspiración, artesanía y propósito**.
+
 Proyecto de una tienda online para mostrar y vender poteras artesanas elaboradas por mí.
 
 El objetivo principal es desarrollar una aplicación completa para mi portfolio, demostrar mis habilidades como desarrollador junior y utilizarla para acceder a mi primera oportunidad profesional en el sector del software. La tienda también podrá ponerse en funcionamiento de forma temporal para realizar ventas reales.

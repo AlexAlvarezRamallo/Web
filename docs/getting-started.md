@@ -233,6 +233,12 @@ La compilación y ESLint finalizaron correctamente antes del primer commit (`050
 
 ## Cómo continuar este registro
 
+### Vista previa de Sobre nosotros (10 de noviembre de 2026)
+
+Se añadió al README una presentación de la página Sobre nosotros con su imagen de portada, enlazada mediante la ruta relativa `frontend/src/assets/nosotrosportada.png`. Se utiliza el archivo existente para evitar duplicarlo. La imagen es la portada, no una captura de la página completa: la captura compartida en el chat no está disponible como archivo local.
+
+La página se encuentra en `frontend/src/pages/SobreNosotros.tsx`, sus estilos en `frontend/src/styles/SobreNosotros.css` y su ruta es `/SobreNosotros`. La cabecera ya enlaza a esta ruta. La compilación del frontend se comprobó con `npm.cmd run build` durante los ajustes de la página. Para esta actualización documental se comprueba `git diff --check` desde la raíz; queda comprobar la presentación de la imagen en GitHub.
+
 ### Segunda página: catálogo de poteras (7 de noviembre de 2026)
 
 Se creó `frontend/src/pages/PoterasPage.tsx` con una portada propia, el texto sobre tamaños y tres tarjetas de productos. Su fondo está en `frontend/src/assets/portadapagepoteras.png` y sus estilos en `frontend/src/styles/PoterasPage.css`. `ProductCard.tsx` está creado pero todavía vacío; las tarjetas siguen escritas directamente en la página y utilizan clases definidas en `HomePage.css`, pendiente de extraer a un componente compartido.

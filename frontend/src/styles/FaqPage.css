@@ -1,0 +1,15 @@
+.faq-page {
+  padding: 48px var(--page-gutter);
+  background: #f8f1e2;
+  color: #142830;
+  text-align: left;
+  flex: 1;
+}
+
+.faq-page h1 { color: #142830; line-height: 1.15; }
+.faq-page__notice { margin-top: 20px; font-size: 14px; }
+.faq-page__questions { max-width: 850px; margin: 32px auto; }
+.faq-page details { border-bottom: 1px solid #c7bda8; padding: 20px 0; }
+.faq-page summary { cursor: pointer; font-weight: 700; }
+.faq-page details p { margin-top: 16px; line-height: 1.7; }
+.faq-page summary:focus-visible { outline: 3px solid #08747b; outline-offset: 4px; }

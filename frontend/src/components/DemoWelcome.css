@@ -1,0 +1,80 @@
+.demo-welcome {
+  box-sizing: border-box;
+  width: min(620px, calc(100% - 32px));
+  max-height: calc(100svh - 32px);
+  overflow-y: auto;
+  margin: auto;
+  padding: clamp(28px, 6vw, 56px);
+  border: 1px solid #c7bda8;
+  border-radius: 16px;
+  background: #f8f1e2;
+  color: #142830;
+  text-align: center;
+  box-shadow: 0 24px 80px #0005;
+}
+
+.demo-welcome::backdrop {
+  background: #081b26c7;
+  backdrop-filter: blur(5px);
+}
+
+.demo-welcome__label {
+  color: #006e6d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.demo-welcome h2 {
+  margin: 20px 0;
+  color: #142830;
+  font-size: clamp(26px, 5vw, 36px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.demo-welcome p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.demo-welcome__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  margin: 28px 0 20px;
+  padding: 16px 24px;
+  border: 1px solid #142830;
+  border-radius: 6px;
+  background: #142830;
+  color: #f8f1e2;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.demo-welcome__button:hover {
+  background: #24505c;
+}
+
+.demo-welcome__button:focus-visible {
+  outline: 3px solid #007c7b;
+  outline-offset: 4px;
+}
+
+.demo-welcome .demo-welcome__note {
+  font-size: 13px;
+  color: #4b5b60;
+}
+
+.demo-disclaimer {
+  margin-top: auto;
+  padding: 18px 24px;
+  background: #142830;
+  color: #f8f1e2;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+}

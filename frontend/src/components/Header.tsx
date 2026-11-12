@@ -6,11 +6,19 @@ const links = [
   { href: '/#inicio', label: 'Inicio' },
   { href: '/poteras', label: 'Poteras' },
   { href: '/SobreNosotros', label: 'Sobre nosotros' },
+  { href: '/preguntas-frecuentes', label: 'Preguntas frecuentes' },
 ]
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
+  const panelRef = useRef<HTMLDialogElement>(null)
+  const [panel, setPanel] = useState<'cuenta' | 'carrito'>('cuenta')
+
+  const openPanel = (nextPanel: 'cuenta' | 'carrito') => {
+    setPanel(nextPanel)
+    panelRef.current?.showModal()
+  }
 
   return (
     <header className="site-header" onKeyDown={(event) => {
@@ -40,8 +48,23 @@ export default function Header() {
             <li key={href}><a href={href} onClick={() => setMenuOpen(false)}>{label}</a></li>
           ))}
         </ul>
-        <a className="site-header__cta" href="/poteras" onClick={() => setMenuOpen(false)}>Ver poteras <span aria-hidden="true">↗</span></a>
+        <div className="site-header__actions">
+          <button type="button" className="site-header__action" onClick={() => openPanel('cuenta')}>Mi cuenta</button>
+          <button type="button" className="site-header__action" onClick={() => openPanel('carrito')}>Carrito (0)</button>
+        </div>
       </nav>
+      <dialog ref={panelRef} className="shop-preview" aria-labelledby="shop-preview-title">
+        <p className="shop-preview__label">Web de demostración</p>
+        <h2 id="shop-preview-title">{panel === 'cuenta' ? 'Tu cuenta en Kraken' : 'Tu carrito está vacío'}</h2>
+        {panel === 'cuenta' ? (
+          <p>En una tienda real podrías iniciar sesión o crear un perfil para consultar tus pedidos. También podrías comprar como invitado, sin crear una cuenta. Esta demostración no registra usuarios ni admite compras.</p>
+        ) : (
+          <p>Este es un ejemplo del acceso al carrito. Todavía no se pueden añadir artículos y esta web no admite pedidos ni pagos.</p>
+        )}
+        <form method="dialog">
+          <button className="site-header__action" type="submit">Seguir explorando</button>
+        </form>
+      </dialog>
     </header>
   )
 }

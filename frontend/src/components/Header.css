@@ -105,7 +105,28 @@
   transform: translateY(0);
 }
 
-@media (max-width: 760px) {
+.site-header__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.site-header__action {
+  padding: 12px 16px;
+  border: 1px solid #142830;
+  border-radius: 6px;
+  background: #142830;
+  color: #faf5e9;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.site-header__action:hover { background: #21505a; }
+.shop-preview { width: min(480px, calc(100% - 32px)); box-sizing: border-box; padding: 28px; border: 0; border-radius: 12px; background: #faf5e9; color: #142830; max-height: calc(100svh - 32px); overflow-y: auto; }
+.shop-preview::backdrop { background: #142830b3; }
+.shop-preview h2 { color: #142830; margin: 16px 0; }
+.shop-preview p { line-height: 1.6; }
+.shop-preview__label { font-size: 13px; color: #006e6d; }
+.shop-preview form { margin-top: 24px; }
+
+@media (max-width: 1100px) {
   .site-header {
     flex-wrap: wrap;
     gap: 16px;

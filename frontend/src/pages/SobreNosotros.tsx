@@ -75,7 +75,9 @@ con la mirada puesta en el mar.»</h1>
           <p>Todos los modelos pueden realizarse en los tamaños disponibles, con pequeños ajustes para mantener una flotabilidad adecuada.</p>
         </div>
         <div className="nosotros-contenido4__texto2">
-          <button className="nosotros-modelos-boton">Descubre los modelos ➔</button>
+          <button className="nosotros-modelos-boton" onClick={() => window.location.href = '/poteras'}>
+            Descubre los modelos ➔
+          </button>
         </div>
       </section>
     </main>
